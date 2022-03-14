@@ -1,18 +1,21 @@
 import { Layout } from 'antd';
 import SideBar from './SideBar';
 import FlightContent from './FlightContent';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { sorter, filter, receivingAirlines, filterTransfers } from '../utils';
 import '../styles/flight.css';
 
 const { Sider, Content } = Layout;
 
 const Flight = ({ flights }) => {
+    const [allAirlines, setAllAirlines] = useState([]);
     const [sorting, setSorting] = useState(null);
     const [transfers, setTransfers] = useState([]);
     const [minPrice, setMinPrice] = useState(0);
     const [maxPrice, setMaxPrice] = useState(0);
     const [airlines, setAirlines] = useState([]);
+
+    useEffect(() => setAllAirlines(receivingAirlines(flights)), [flights]);
 
     const filterOptions = {
         airlines,
@@ -20,13 +23,11 @@ const Flight = ({ flights }) => {
         maxPrice
     };
 
-    const allAirlines = receivingAirlines(flights);
-
     const filteredTransfers = filterTransfers(flights, transfers);
     const filteredFlights = filter(filteredTransfers, filterOptions);
     const resultFilterAndSortingFlights = sorter(filteredFlights, sorting);
 
-    const filteretedAirlines = receivingAirlines(filteredFlights);
+    const filteretedAirlines = receivingAirlines(filteredTransfers);
 
     return (
         <Layout style={{height: '100%'}} className='site-layout-background' >

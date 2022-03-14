@@ -3,7 +3,7 @@ export const receivingAirlines = (flights) => [...new Set(
 )];
 
 export const sorter = (sortableArray, sortingType) => {
-    const result = sortableArray;
+    const result = [...sortableArray];
 
     switch (sortingType) {
         case 1:
@@ -31,7 +31,7 @@ export const sorter = (sortableArray, sortingType) => {
 };
 
 export const filterTransfers = (filterableArray, transfers) => {
-    let result = filterableArray;
+    let result = [...filterableArray];
     if (transfers.length > 0) {
         result = result.filter((item) => {
             const oneSegments = item.flight.legs[0].segments;
@@ -55,7 +55,7 @@ export const filterTransfers = (filterableArray, transfers) => {
 }
 
 export const filter = (filterableArray, options) => {
-    let result = filterableArray;
+    let result = [...filterableArray];
     const {
         airlines,
         minPrice,
