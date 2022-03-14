@@ -1,0 +1,58 @@
+.flightContentCard {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.flightContentCard button {
+    border: none;
+    background-color: #E3B666;
+    font-size: 22px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.flightContentCard_header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #64B5F0;
+}
+
+.header_logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+}
+
+.header_price {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #ffffff;
+}
+
+.header_price_currency {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.header_price_currency img {
+    height: 19px;
+    margin-left: 10px;
+    filter: brightness(0) invert(1);
+}
+
+.partOfTheCard {
+    padding: 15px 15px 0 15px;
+}
+
+.separator {
+    height: 2px;
+    margin: 10px 0 10px 0;
+    border: 1px solid #08c;
+}

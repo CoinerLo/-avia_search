@@ -1,0 +1,42 @@
+.partOfTheCard_fromAndTo {
+    display: flex;
+    padding: 5px;
+    border-bottom: 1px solid #7E8281;
+    font-size: 22px;
+}
+
+.partOfTheCard_timings {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    padding: 5px;
+    font-size: 20px;
+}
+
+.partOfTheCard_transfers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 2px;
+    width: 70%;
+    margin: auto;
+    border: 1px solid #7E8281;
+}
+
+.partOfTheCard_transfers span {
+    padding: 0 20px 0 20px;
+    z-index: 10;
+    background-color: #ffffff;
+    font-size: 16px;
+    color: #E3B666;
+}
+
+.partOfTheCard_timings_data {
+    font-size: 16px;
+    color: #08c;
+}
+
+.color08c {
+    color: #08c;
+}
